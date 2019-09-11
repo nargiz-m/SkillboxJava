@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormRegistration">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="905" height="636"/>
+    </constraints>
+    <properties>
+      <maximumSize width="905" height="636"/>
+      <minimumSize width="905" height="636"/>
+      <preferredSize width="905" height="636"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="9925" layout-manager="FlowLayout" hgap="15" vgap="11" flow-align="2">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-1644826"/>
+          <maximumSize width="905" height="40"/>
+          <minimumSize width="905" height="40"/>
+          <opaque value="true"/>
+          <preferredSize width="905" height="40"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="f7c65" class="javax.swing.JButton" binding="hideButton">
+            <constraints/>
+            <properties>
+              <borderPainted value="false"/>
+              <maximumSize width="18" height="18"/>
+              <minimumSize width="18" height="18"/>
+              <preferredSize width="18" height="18"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="da099" class="javax.swing.JButton" binding="closeButton">
+            <constraints/>
+            <properties>
+              <borderPainted value="false"/>
+              <maximumSize width="18" height="18"/>
+              <minimumSize width="18" height="18"/>
+              <preferredSize width="18" height="18"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="b9e7b" binding="mainPanel" custom-create="true" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <maximumSize width="905" height="596"/>
+          <minimumSize width="905" height="596"/>
+          <preferredSize width="905" height="596"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="9628b" binding="logoPanel" custom-create="true" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="130" height="133"/>
+              <minimumSize width="130" height="133"/>
+              <opaque value="false"/>
+              <preferredSize width="130" height="133"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="fa7f1" layout-manager="FlowLayout" hgap="0" vgap="40" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="280" height="118"/>
+              <minimumSize width="280" height="118"/>
+              <opaque value="false"/>
+              <preferredSize width="280" height="118"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="cc41" class="javax.swing.JTextPane" binding="textPane">
+                <constraints/>
+                <properties>
+                  <editable value="false"/>
+                  <enabled value="true"/>
+                  <focusable value="false"/>
+                  <font name="Segoe UI" size="16"/>
+                  <foreground color="-1"/>
+                  <maximumSize width="250" height="60"/>
+                  <minimumSize width="250" height="60"/>
+                  <opaque value="false"/>
+                  <preferredSize width="250" height="60"/>
+                  <text value="Введите ваши имя и фамилию для завершения регистрации"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="66607" binding="namePanel" layout-manager="FlowLayout" hgap="1" vgap="12" flow-align="0">
+            <constraints/>
+            <properties>
+              <maximumSize width="238" height="54"/>
+              <minimumSize width="238" height="54"/>
+              <opaque value="false"/>
+              <preferredSize width="238" height="55"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="54b6c" class="javax.swing.JTextField" binding="nameField" custom-create="true">
+                <constraints/>
+                <properties>
+                  <font name="Segoe UI Light" size="36"/>
+                  <foreground color="-1"/>
+                  <maximumSize width="220" height="41"/>
+                  <minimumSize width="220" height="41"/>
+                  <opaque value="false"/>
+                  <preferredSize width="220" height="41"/>
+                  <text value="Имя"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="33177" binding="surnamePanel" layout-manager="FlowLayout" hgap="1" vgap="22" flow-align="0">
+            <constraints/>
+            <properties>
+              <maximumSize width="238" height="64"/>
+              <minimumSize width="238" height="64"/>
+              <opaque value="false"/>
+              <preferredSize width="238" height="64"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="10f7c" class="javax.swing.JTextField" binding="surnameField" custom-create="true">
+                <constraints/>
+                <properties>
+                  <font name="Segoe UI Light" size="36"/>
+                  <foreground color="-1"/>
+                  <maximumSize width="220" height="41"/>
+                  <minimumSize width="220" height="41"/>
+                  <opaque value="false"/>
+                  <preferredSize width="220" height="41"/>
+                  <text value="Фамилия"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="9515" layout-manager="FlowLayout" hgap="0" vgap="70" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="500" height="150"/>
+              <minimumSize width="500" height="150"/>
+              <opaque value="false"/>
+              <preferredSize width="500" height="150"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f8f87" class="javax.swing.JButton" binding="buttonComplete" custom-create="true">
+                <constraints/>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <background color="-16731162"/>
+                  <borderPainted value="false"/>
+                  <font name="Courier New" size="20" style="0"/>
+                  <foreground color="-1"/>
+                  <maximumSize width="337" height="65"/>
+                  <minimumSize width="337" height="65"/>
+                  <opaque value="false"/>
+                  <preferredSize width="337" height="65"/>
+                  <text value="ЗАВЕРШИТЬ"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

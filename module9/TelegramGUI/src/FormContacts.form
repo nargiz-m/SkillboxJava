@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormContacts">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="900" height="600"/>
+    </constraints>
+    <properties>
+      <maximumSize width="900" height="600"/>
+      <minimumSize width="900" height="600"/>
+      <preferredSize width="900" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="eca42" layout-manager="FlowLayout" hgap="15" vgap="11" flow-align="2">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-1644826"/>
+          <maximumSize width="905" height="40"/>
+          <minimumSize width="905" height="40"/>
+          <opaque value="true"/>
+          <preferredSize width="905" height="40"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="52c0e" class="javax.swing.JButton" binding="hideButton">
+            <constraints/>
+            <properties>
+              <borderPainted value="false"/>
+              <maximumSize width="18" height="18"/>
+              <minimumSize width="18" height="18"/>
+              <preferredSize width="18" height="18"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="d7856" class="javax.swing.JButton" binding="closeButton">
+            <constraints/>
+            <properties>
+              <borderPainted value="false"/>
+              <maximumSize width="18" height="18"/>
+              <minimumSize width="18" height="18"/>
+              <preferredSize width="18" height="18"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="2be7b" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="2fc7d" binding="menuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints border-constraint="North"/>
+            <properties>
+              <background color="-16731162"/>
+              <maximumSize width="900" height="50"/>
+              <minimumSize width="900" height="50"/>
+              <opaque value="true"/>
+              <preferredSize width="900" height="50"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="eed14" layout-manager="FlowLayout" hgap="15" vgap="11" flow-align="2">
+                <constraints border-constraint="East"/>
+                <properties>
+                  <maximumSize width="250" height="40"/>
+                  <minimumSize width="250" height="40"/>
+                  <opaque value="false"/>
+                  <preferredSize width="250" height="40"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="ab983" class="javax.swing.JButton" binding="profileButton" custom-create="true">
+                    <constraints/>
+                    <properties>
+                      <background color="-16731162"/>
+                      <borderPainted value="false"/>
+                      <maximumSize width="150" height="29"/>
+                      <minimumSize width="150" height="29"/>
+                      <preferredSize width="180" height="29"/>
+                      <rolloverEnabled value="true"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="4dcab" binding="logoPanel" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints border-constraint="West"/>
+                <properties>
+                  <maximumSize width="140" height="24"/>
+                  <minimumSize width="140" height="24"/>
+                  <opaque value="false"/>
+                  <preferredSize width="140" height="24"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+          <grid id="136d9" binding="currentDialogPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="c9d50" binding="contactPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <maximumSize width="0" height="45"/>
+                  <minimumSize width="0" height="45"/>
+                  <opaque value="false"/>
+                  <preferredSize width="0" height="45"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="54a8d" layout-manager="FlowLayout" hgap="10" vgap="8" flow-align="0">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <maximumSize width="250" height="0"/>
+                      <minimumSize width="250" height="0"/>
+                      <opaque value="false"/>
+                      <preferredSize width="250" height="0"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="5a936" binding="currentContactPicPanel" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="29" height="29"/>
+                          <minimumSize width="29" height="29"/>
+                          <preferredSize width="29" height="29"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <component id="afd28" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <font name="Segoe UI" size="16" style="0"/>
+                          <foreground color="-9145228"/>
+                          <text value="Петр Сергеев"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <component id="57dec" class="javax.swing.JButton" binding="editButton">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <background color="-1"/>
+                      <borderPainted value="false"/>
+                      <maximumSize width="50" height="30"/>
+                      <minimumSize width="50" height="30"/>
+                      <opaque value="false"/>
+                      <preferredSize width="50" height="30"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="daeb" binding="yourMessagePanel" layout-manager="FlowLayout" hgap="0" vgap="5" flow-align="1">
+                <constraints border-constraint="South"/>
+                <properties>
+                  <maximumSize width="0" height="80"/>
+                  <minimumSize width="0" height="80"/>
+                  <opaque value="false"/>
+                  <preferredSize width="0" height="80"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="a2666" binding="currentMessagePanel" custom-create="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints/>
+                    <properties>
+                      <maximumSize width="512" height="46"/>
+                      <minimumSize width="512" height="46"/>
+                      <opaque value="false"/>
+                      <preferredSize width="512" height="46"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="94aa2" class="javax.swing.JTextPane" binding="textPane1" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <font name="Segoe UI" size="18"/>
+                          <foreground color="-10066330"/>
+                          <maximumSize width="470" height="38"/>
+                          <minimumSize width="470" height="38"/>
+                          <opaque value="false"/>
+                          <preferredSize width="470" height="38"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <component id="5e1e0" class="javax.swing.JButton" binding="sendButton">
+                    <constraints/>
+                    <properties>
+                      <borderPainted value="false"/>
+                      <maximumSize width="62" height="45"/>
+                      <minimumSize width="62" height="45"/>
+                      <opaque value="false"/>
+                      <preferredSize width="62" height="45"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="c1f6" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <foreground color="-9145228"/>
+                  <opaque value="false"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="2d3ff" binding="converrsationPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="South"/>
+                    <properties>
+                      <maximumSize width="0" height="100"/>
+                      <minimumSize width="0" height="100"/>
+                      <opaque value="false"/>
+                      <preferredSize width="0" height="310"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="b0b3c" binding="inLinePanel1" layout-manager="FlowLayout" hgap="20" vgap="5" flow-align="0">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="32767" height="90"/>
+                          <opaque value="false"/>
+                          <preferredSize width="650" height="100"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="dbebb" binding="inMessageTimePanel1" layout-manager="BorderLayout" hgap="0" vgap="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="315" height="80"/>
+                              <minimumSize width="315" height="80"/>
+                              <opaque value="false"/>
+                              <preferredSize width="315" height="90"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <grid id="b1803" binding="inTimePanel1" layout-manager="FlowLayout" hgap="10" vgap="2" flow-align="2">
+                                <constraints border-constraint="South"/>
+                                <properties>
+                                  <maximumSize width="0" height="10"/>
+                                  <minimumSize width="0" height="10"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="0" height="20"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <component id="d2a57" class="javax.swing.JLabel" binding="inTimeLabel1">
+                                    <constraints/>
+                                    <properties>
+                                      <font name="Segoe UI" size="11"/>
+                                      <foreground color="-4737097"/>
+                                      <text value="01.08.2015 в 13:43"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
+                              <grid id="f0a2b" binding="inMessagePanel1" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                <constraints border-constraint="Center"/>
+                                <properties>
+                                  <maximumSize width="315" height="50"/>
+                                  <minimumSize width="315" height="50"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="315" height="50"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <grid id="d9a11" binding="inTopPanel1" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="North"/>
+                                    <properties>
+                                      <maximumSize width="308" height="8"/>
+                                      <minimumSize width="308" height="8"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="308" height="8"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="425a7" binding="inLeftfPanel1" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="West"/>
+                                    <properties>
+                                      <maximumSize width="7" height="11"/>
+                                      <minimumSize width="7" height="11"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="7" height="11"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="6a8d3" binding="inBottomPanel1" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="South"/>
+                                    <properties>
+                                      <maximumSize width="308" height="8"/>
+                                      <minimumSize width="308" height="8"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="308" height="8"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="838b1" layout-manager="FlowLayout" hgap="15" vgap="3" flow-align="0">
+                                    <constraints border-constraint="Center"/>
+                                    <properties>
+                                      <background color="-16668711"/>
+                                      <preferredSize width="265" height="50"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children>
+                                      <component id="413a5" class="javax.swing.JTextPane" binding="inMessageTextPane1">
+                                        <constraints/>
+                                        <properties>
+                                          <editable value="false"/>
+                                          <font name="Segoe UI" size="16"/>
+                                          <foreground color="-1"/>
+                                          <opaque value="false"/>
+                                          <text value="Добрый день.&#10;Напишу вам, как соберусь выезжать."/>
+                                        </properties>
+                                      </component>
+                                    </children>
+                                  </grid>
+                                </children>
+                              </grid>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                      <grid id="746f1" binding="inLinePanel2" layout-manager="FlowLayout" hgap="20" vgap="5" flow-align="0">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="32767" height="90"/>
+                          <opaque value="false"/>
+                          <preferredSize width="650" height="100"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="fe360" binding="inMessageTimePanel2" layout-manager="BorderLayout" hgap="0" vgap="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="315" height="80"/>
+                              <minimumSize width="315" height="80"/>
+                              <opaque value="false"/>
+                              <preferredSize width="315" height="90"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <grid id="b7668" layout-manager="FlowLayout" hgap="10" vgap="2" flow-align="2">
+                                <constraints border-constraint="South"/>
+                                <properties>
+                                  <maximumSize width="0" height="10"/>
+                                  <minimumSize width="0" height="10"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="0" height="20"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <component id="721a7" class="javax.swing.JLabel" binding="inTimeLabel2">
+                                    <constraints/>
+                                    <properties>
+                                      <font name="Segoe UI" size="11"/>
+                                      <foreground color="-4737097"/>
+                                      <text value="вчера 19:35"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
+                              <grid id="d8b9e" binding="inMessagePanel2" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                <constraints border-constraint="Center"/>
+                                <properties>
+                                  <maximumSize width="315" height="50"/>
+                                  <minimumSize width="315" height="50"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="315" height="50"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <grid id="727a1" binding="inTopPanel2" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="North"/>
+                                    <properties>
+                                      <maximumSize width="308" height="8"/>
+                                      <minimumSize width="308" height="8"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="308" height="8"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="e794a" binding="inLeftfPanel2" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="West"/>
+                                    <properties>
+                                      <maximumSize width="7" height="11"/>
+                                      <minimumSize width="7" height="11"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="7" height="11"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="5484d" binding="inBottomPanel2" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="South"/>
+                                    <properties>
+                                      <maximumSize width="308" height="8"/>
+                                      <minimumSize width="308" height="8"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="308" height="8"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="ff513" layout-manager="FlowLayout" hgap="15" vgap="3" flow-align="0">
+                                    <constraints border-constraint="Center"/>
+                                    <properties>
+                                      <background color="-16668711"/>
+                                      <preferredSize width="265" height="50"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children>
+                                      <component id="be749" class="javax.swing.JTextPane" binding="inMessageTextPane2">
+                                        <constraints/>
+                                        <properties>
+                                          <editable value="false"/>
+                                          <font name="Segoe UI" size="16"/>
+                                          <foreground color="-1"/>
+                                          <minimumSize width="78" height="50"/>
+                                          <opaque value="false"/>
+                                          <preferredSize width="271" height="50"/>
+                                          <text value="Буду завтра в 17 часов около входа в ваш офис"/>
+                                        </properties>
+                                      </component>
+                                    </children>
+                                  </grid>
+                                </children>
+                              </grid>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                      <grid id="ee626" binding="outLinePanel1" layout-manager="FlowLayout" hgap="20" vgap="5" flow-align="2">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="32767" height="90"/>
+                          <opaque value="false"/>
+                          <preferredSize width="650" height="90"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="4124c" binding="outMessageTimePanel1" layout-manager="BorderLayout" hgap="0" vgap="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="315" height="80"/>
+                              <minimumSize width="315" height="80"/>
+                              <opaque value="false"/>
+                              <preferredSize width="315" height="70"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <grid id="a30b2" layout-manager="FlowLayout" hgap="10" vgap="2" flow-align="0">
+                                <constraints border-constraint="South"/>
+                                <properties>
+                                  <maximumSize width="0" height="10"/>
+                                  <minimumSize width="0" height="10"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="0" height="20"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <component id="543f" class="javax.swing.JLabel" binding="outTimeLabel1">
+                                    <constraints/>
+                                    <properties>
+                                      <font name="Segoe UI" size="11"/>
+                                      <foreground color="-4737097"/>
+                                      <text value="5 минут назад"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
+                              <grid id="8a1be" binding="outMessagePanel1" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                <constraints border-constraint="Center"/>
+                                <properties>
+                                  <maximumSize width="315" height="50"/>
+                                  <minimumSize width="315" height="50"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="315" height="50"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <grid id="6029e" binding="outTopPanel1" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="North"/>
+                                    <properties>
+                                      <maximumSize width="308" height="8"/>
+                                      <minimumSize width="308" height="8"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="308" height="8"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="bf766" binding="outRightPanel1" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="East"/>
+                                    <properties>
+                                      <maximumSize width="7" height="11"/>
+                                      <minimumSize width="7" height="11"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="7" height="11"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="647d" binding="outBottomPanel1" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                                    <constraints border-constraint="South"/>
+                                    <properties>
+                                      <maximumSize width="308" height="8"/>
+                                      <minimumSize width="308" height="8"/>
+                                      <opaque value="false"/>
+                                      <preferredSize width="308" height="8"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children/>
+                                  </grid>
+                                  <grid id="2e585" layout-manager="FlowLayout" hgap="15" vgap="3" flow-align="0">
+                                    <constraints border-constraint="Center"/>
+                                    <properties>
+                                      <background color="-11909976"/>
+                                      <preferredSize width="264" height="50"/>
+                                    </properties>
+                                    <border type="none"/>
+                                    <children>
+                                      <component id="3e602" class="javax.swing.JTextPane" binding="outMessageTextPane1">
+                                        <constraints/>
+                                        <properties>
+                                          <editable value="false"/>
+                                          <font name="Segoe UI" size="16"/>
+                                          <foreground color="-1"/>
+                                          <opaque value="false"/>
+                                          <text value="Хорошо! До встречи."/>
+                                        </properties>
+                                      </component>
+                                    </children>
+                                  </grid>
+                                </children>
+                              </grid>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="acf94" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints border-constraint="West"/>
+            <properties>
+              <background color="-1644826"/>
+              <foreground color="-1644826"/>
+              <maximumSize width="250" height="0"/>
+              <minimumSize width="250" height="0"/>
+              <opaque value="true"/>
+              <preferredSize width="250" height="0"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="1e27d" binding="searchPanel" layout-manager="FlowLayout" hgap="15" vgap="6" flow-align="0">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <alignmentX value="0.0"/>
+                  <alignmentY value="0.0"/>
+                  <background color="-1"/>
+                  <maximumSize width="220" height="45"/>
+                  <minimumSize width="220" height="45"/>
+                  <preferredSize width="220" height="45"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="df50f" binding="searchIconPanel" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints/>
+                    <properties>
+                      <maximumSize width="40" height="20"/>
+                      <minimumSize width="40" height="20"/>
+                      <opaque value="false"/>
+                      <preferredSize width="40" height="20"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <component id="d195d" class="javax.swing.JTextField" binding="searchField" custom-create="true">
+                    <constraints/>
+                    <properties>
+                      <font name="Segoe UI" size="18"/>
+                      <foreground color="-4737097"/>
+                      <opaque value="false"/>
+                      <preferredSize width="120" height="30"/>
+                      <text value="Поиск"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="51790" binding="plusPanel" layout-manager="FlowLayout" hgap="20" vgap="0" flow-align="0">
+                <constraints border-constraint="South"/>
+                <properties>
+                  <maximumSize width="0" height="50"/>
+                  <minimumSize width="0" height="50"/>
+                  <opaque value="false"/>
+                  <preferredSize width="0" height="50"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="f3632" class="javax.swing.JButton" binding="plusButton">
+                    <constraints/>
+                    <properties>
+                      <background color="-1644826"/>
+                      <borderPainted value="false"/>
+                      <maximumSize width="27" height="27"/>
+                      <minimumSize width="27" height="27"/>
+                      <opaque value="true"/>
+                      <preferredSize width="27" height="27"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="73d24" binding="listPanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-1644826"/>
+                  <opaque value="false"/>
+                  <preferredSize width="220" height="20"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="eb6c2" binding="dialogPanel1" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints/>
+                    <properties>
+                      <background color="-1644826"/>
+                      <maximumSize width="250" height="60"/>
+                      <minimumSize width="250" height="60"/>
+                      <opaque value="false"/>
+                      <preferredSize width="250" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="9aa99" binding="onlinePicPanel" custom-create="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints border-constraint="West"/>
+                        <properties>
+                          <maximumSize width="60" height="60"/>
+                          <minimumSize width="60" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="60" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="5ab3d" binding="lastLogPanel" layout-manager="FlowLayout" hgap="5" vgap="15" flow-align="1">
+                        <constraints border-constraint="East"/>
+                        <properties>
+                          <maximumSize width="30" height="60"/>
+                          <minimumSize width="30" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="50" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="af526" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <font name="Segoe UI" size="10"/>
+                              <foreground color="-4737097"/>
+                              <text value="2 мин."/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="97cd9" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                        <constraints border-constraint="Center"/>
+                        <properties>
+                          <maximumSize width="140" height="60"/>
+                          <minimumSize width="140" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="140" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="fbd9f" binding="namePanel" layout-manager="FlowLayout" hgap="0" vgap="5" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="140" height="30"/>
+                              <minimumSize width="140" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="140" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="bcf50" class="javax.swing.JTextPane" binding="андрейПетровTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="16" style="1"/>
+                                  <foreground color="-10066330"/>
+                                  <maximumSize width="140" height="30"/>
+                                  <minimumSize width="140" height="30"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="140" height="30"/>
+                                  <text value="Андрей Петров"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="12d52" binding="lastMessagePanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="140" height="30"/>
+                              <minimumSize width="140" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="140" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="1d281" class="javax.swing.JTextPane" binding="хорошоДоВстречиTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="12"/>
+                                  <foreground color="-10066330"/>
+                                  <maximumSize width="150" height="30"/>
+                                  <minimumSize width="150" height="30"/>
+                                  <opaque value="false"/>
+                                  <preferredSize width="150" height="30"/>
+                                  <text value="Хорошо! До встречи..."/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                  <grid id="67f6" binding="dialogPanel2" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints/>
+                    <properties>
+                      <background color="-1"/>
+                      <maximumSize width="250" height="60"/>
+                      <minimumSize width="250" height="60"/>
+                      <preferredSize width="250" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="ec0" binding="chosenPicPanel" custom-create="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints border-constraint="West"/>
+                        <properties>
+                          <maximumSize width="60" height="60"/>
+                          <minimumSize width="60" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="60" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="1857d" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints border-constraint="East"/>
+                        <properties>
+                          <maximumSize width="40" height="60"/>
+                          <minimumSize width="40" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="40" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="16fd3" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                        <constraints border-constraint="Center"/>
+                        <properties>
+                          <maximumSize width="150" height="60"/>
+                          <minimumSize width="150" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="150" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="3a454" layout-manager="FlowLayout" hgap="0" vgap="5" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="150" height="30"/>
+                              <minimumSize width="150" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="150" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="46590" class="javax.swing.JTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="16" style="1"/>
+                                  <foreground color="-10066330"/>
+                                  <opaque value="false"/>
+                                  <text value="Петр Сергеев"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="2b21d" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="150" height="30"/>
+                              <minimumSize width="150" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="150" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="f1c5c" class="javax.swing.JTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="12"/>
+                                  <foreground color="-10066330"/>
+                                  <opaque value="false"/>
+                                  <text value="Вы: Хорошо! До встречи."/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                  <grid id="6fe98" binding="dialogPanel3" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints/>
+                    <properties>
+                      <maximumSize width="240" height="60"/>
+                      <minimumSize width="240" height="60"/>
+                      <opaque value="false"/>
+                      <preferredSize width="250" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="8fbb" binding="picPanel" custom-create="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints border-constraint="West"/>
+                        <properties>
+                          <maximumSize width="60" height="60"/>
+                          <minimumSize width="60" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="60" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="afc79" layout-manager="FlowLayout" hgap="5" vgap="15" flow-align="1">
+                        <constraints border-constraint="East"/>
+                        <properties>
+                          <maximumSize width="30" height="60"/>
+                          <minimumSize width="30" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="50" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="63cb1" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <font name="Segoe UI" size="10"/>
+                              <foreground color="-4737097"/>
+                              <text value="17.07.15"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="98c7f" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                        <constraints border-constraint="Center"/>
+                        <properties>
+                          <maximumSize width="130" height="60"/>
+                          <minimumSize width="130" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="140" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="55d11" layout-manager="FlowLayout" hgap="0" vgap="5" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="140" height="30"/>
+                              <minimumSize width="140" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="140" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="cc67f" class="javax.swing.JTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="16" style="1"/>
+                                  <foreground color="-10066330"/>
+                                  <opaque value="false"/>
+                                  <text value="Дмитрий Петров"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="af09b" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="140" height="30"/>
+                              <minimumSize width="140" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="140" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="6611b" class="javax.swing.JTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="12"/>
+                                  <foreground color="-10066330"/>
+                                  <opaque value="false"/>
+                                  <text value="Почему?"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                  <grid id="1d77" binding="dialogPanel4" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints/>
+                    <properties>
+                      <maximumSize width="240" height="60"/>
+                      <minimumSize width="240" height="60"/>
+                      <opaque value="false"/>
+                      <preferredSize width="250" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="f4ff5" binding="onlinePicPanel1" custom-create="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints border-constraint="West"/>
+                        <properties>
+                          <maximumSize width="60" height="60"/>
+                          <minimumSize width="60" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="60" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="5ad6d" layout-manager="FlowLayout" hgap="5" vgap="15" flow-align="1">
+                        <constraints border-constraint="East"/>
+                        <properties>
+                          <maximumSize width="30" height="60"/>
+                          <minimumSize width="30" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="50" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="c9f41" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <font name="Segoe UI" size="10"/>
+                              <foreground color="-4737097"/>
+                              <text value="11.07.15"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="cb9b0" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                        <constraints border-constraint="Center"/>
+                        <properties>
+                          <maximumSize width="140" height="60"/>
+                          <minimumSize width="140" height="60"/>
+                          <opaque value="false"/>
+                          <preferredSize width="140" height="60"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="c250d" layout-manager="FlowLayout" hgap="0" vgap="5" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <maximumSize width="140" height="30"/>
+                              <minimumSize width="140" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="140" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="4ad2c" class="javax.swing.JTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="16" style="1"/>
+                                  <foreground color="-10066330"/>
+                                  <opaque value="false"/>
+                                  <text value="Петраков Олег"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="c1a8f" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                            <constraints/>
+                            <properties>
+                              <font name="Segoe UI" size="12"/>
+                              <foreground color="-10066330"/>
+                              <maximumSize width="140" height="30"/>
+                              <minimumSize width="140" height="30"/>
+                              <opaque value="false"/>
+                              <preferredSize width="140" height="30"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="3e686" class="javax.swing.JTextPane" default-binding="true">
+                                <constraints/>
+                                <properties>
+                                  <editable value="false"/>
+                                  <font name="Segoe UI" size="12"/>
+                                  <foreground color="-10066330"/>
+                                  <opaque value="false"/>
+                                  <text value="Буду завтра в 20:00..."/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
