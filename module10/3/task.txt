@@ -1,0 +1,1 @@
+Написать программу, которая будет преобразовывать файлы формата “Probabilites.txt” в файлы формата “Probabilities formatted.txt”.
