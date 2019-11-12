@@ -13,7 +13,6 @@ public class MyFileVisitor implements FileVisitor<Path> {
     public MyFileVisitor(Path source, Path target) {
         this.source = source;
         this.target = target;
-        System.out.println(source + " " + target);
     }
     
     @Override
@@ -21,7 +20,6 @@ public class MyFileVisitor implements FileVisitor<Path> {
         Path newDir = target.resolve(source.relativize(dir));
         try {
             Files.copy(dir, newDir, REPLACE_EXISTING);
-            System.out.println("preVisitDirectory");
         } catch (FileAlreadyExistsException x) {
             // ignore
         } catch (IOException x) {
