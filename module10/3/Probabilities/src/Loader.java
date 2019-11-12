@@ -15,13 +15,16 @@ public class Loader {
         String[][] objects = new String[100][100];
 
         int length = 0;
-        String longestString = "";
 
         for(int i = 0;;i++) {
             String line = reader.readLine();
-            if(line == null) break;
+            if(line == null) {
+                break;
+            }
             String[] currentRow = line.trim().split("\\s+");
-            if(i == 0) for(int j = 0; j < currentRow.length; j++) name.put(currentRow[j], j + 1);
+            if(i == 0) {
+                for(int j = 0; j < currentRow.length; j++) name.put(currentRow[j], j + 1);
+            }
             else {
                 date.put(currentRow[0], i);
                 for(int j = 1; j < currentRow.length; j++) {
