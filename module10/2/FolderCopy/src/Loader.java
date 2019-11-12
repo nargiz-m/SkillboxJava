@@ -1,6 +1,6 @@
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
+import java.io.IOException;
+import java.nio.file.*;
+import java.util.EnumSet;
 import java.util.Scanner;
 
 public class Loader {
@@ -8,34 +8,16 @@ public class Loader {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Set source folder: ");
-        String src = scanner.nextLine().trim();
-//        String src = "C:/Users/Наргиз/Desktop/JavaProjects0Pro1/MyFirstProject/";
+        String src = scanner.nextLine().trim(); //C:/Users/Наргиз/Desktop/JavaProjects0Pro1/MyFirstProject/
+        Path source = Paths.get(src);
 
         System.out.println("Set destination folder: ");
-        String dest = scanner.nextLine().trim();
-//        String dest = "C:/Users/Наргиз/Desktop/exp/";
+        String dest = scanner.nextLine().trim(); //C:/Users/Наргиз/Desktop/exp/
+        Path target = Paths.get(dest).resolve(source.getFileName());
 
-        File directoryPath = new File(src);
-        File[] files = directoryPath.listFiles();
-        for(File file : files) {
-            Files.copy(
-                    file.toPath(),
-                    (new File(dest + file.getName())).toPath(),
-                    StandardCopyOption.REPLACE_EXISTING);
-            if(file.isDirectory()) getContents(file, dest);
-        }
-    }
-
-    public static void getContents(File directoryPath, String dest) throws IOException {
-        File[] files = directoryPath.listFiles();
-        dest = dest + '/' + directoryPath.getName() + '/';
-        for(File file : files) {
-            Files.copy(
-                    file.toPath(),
-                    (new File(dest + file.getName())).toPath(),
-                    StandardCopyOption.REPLACE_EXISTING);
-            if(file.isDirectory()) getContents(file, dest);
-        }
+        EnumSet<FileVisitOption> opts = EnumSet.of(FileVisitOption.FOLLOW_LINKS);
+        MyFileVisitor myFileVisitor = new MyFileVisitor(source, target);
+        Files.walkFileTree(source, opts, Integer.MAX_VALUE, myFileVisitor);
     }
 }
 
