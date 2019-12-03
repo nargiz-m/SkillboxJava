@@ -13,7 +13,8 @@ public class Loader {
         getContents(directoryPath, 0);
     }
 
-    private static void getContents(File directory, int n) {
+    private static long getContents(File directory, int n) {
+        long length = 0;
         File[] files = directory.listFiles();
         n++;
         if (files != null) {
@@ -22,14 +23,16 @@ public class Loader {
                     System.out.print("  ");
                 }
                 if (file.isFile()) {
-                    System.out.println(file.getName() + " (" + file.length() + " bytes)");
+                    System.out.println(file.getName() + " " + file.length());
+                    length += file.length();
                 }
                 if (file.isDirectory()) {
-                    System.out.println(file.getName() + " (" + directorySize(file) + " bytes)");
-                    getContents(file, n);
+                    System.out.println(file.getName() + " " + length);
+                    length += getContents(file, n);
                 }
             }
         }
+        return length;
     }
 
     private static long directorySize(File directory) {

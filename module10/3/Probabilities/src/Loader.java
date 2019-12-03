@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
@@ -10,10 +7,12 @@ public class Loader {
     public static void main(String[] args) {
         Path src = Paths.get("res", "Probabilites.txt");
         Path dest = Paths.get("res", "formatted.txt");
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(src.toString()));
+
+        try (FileReader fileReader = new FileReader(src.toString());
+             BufferedReader reader = new BufferedReader(fileReader);
+             PrintWriter pw = new PrintWriter(dest.toString()))
+        {
             HashMap<String, Integer> name = new HashMap<>();
-            PrintWriter pw = new PrintWriter(dest.toString());
             pw.write("\t\t");
 
             int length = 0;
@@ -33,9 +32,12 @@ public class Loader {
                     }
                     name = sortByValue(name);
                     for (String nameInstance : name.keySet()) {
-                        String strToPrint = "\t" + nameInstance;
-                        for (int j = 0; j < (length - nameInstance.length()) / 4; j++) strToPrint += "\t";
-                        pw.write("\t|" + strToPrint);
+                        StringBuilder strToWrite = new StringBuilder();
+                        strToWrite.append("\t" + nameInstance);
+                        for (int j = 0; j < (length - nameInstance.length()) / 4; j++) {
+                            strToWrite.append("\t");
+                        }
+                        pw.write("\t|" + strToWrite);
                     }
                 } else {
                     for (int j = 1; j < currentRow.length; j++) {
@@ -45,17 +47,15 @@ public class Loader {
                     }
                     pw.write("\n" + currentRow[0]);
                     for (int j = 1; j < currentRow.length; j++) {
-                        String strToPrint = "\t" + currentRow[j];
+                        StringBuilder strToWrite = new StringBuilder();
+                        strToWrite.append("\t" + currentRow[j]);
                         for (int k = 0; k < (length - currentRow[j].length()) / 4; j++) {
-                            strToPrint += "\t";
+                            strToWrite.append("\t");
                         }
-                        pw.write("\t|" + strToPrint);
+                        pw.write("\t|" + strToWrite);
                     }
                 }
             }
-
-            pw.flush();
-            pw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
