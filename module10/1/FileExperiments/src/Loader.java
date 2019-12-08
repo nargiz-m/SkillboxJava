@@ -1,5 +1,4 @@
 import java.io.File;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Loader {
@@ -10,7 +9,9 @@ public class Loader {
         //path = "C:/Users/Наргиз/Desktop/JavaProjects0Pro1/MyFirstProject";
 
         File directoryPath = new File(path);
-        getContents(directoryPath, 0);
+        System.out.println(directoryPath.getName());
+        long totalSize = getContents(directoryPath, 1);
+        System.out.println("Total size of the directory: " + totalSize + " bytes");
     }
 
     private static long getContents(File directory, int n) {
@@ -23,28 +24,12 @@ public class Loader {
                     System.out.print("  ");
                 }
                 if (file.isFile()) {
-                    System.out.println(file.getName() + " " + file.length());
+                    System.out.println(file.getName() + " (" + file.length() + " bytes)");
                     length += file.length();
                 }
                 if (file.isDirectory()) {
-                    System.out.println(file.getName() + " " + length);
+                    System.out.println(file.getName());
                     length += getContents(file, n);
-                }
-            }
-        }
-        return length;
-    }
-
-    private static long directorySize(File directory) {
-        long length = 0;
-        File[] files = directory.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                if (file.isFile()) {
-                    length += file.length();
-                }
-                if (file.isDirectory()) {
-                    length += directorySize(file);
                 }
             }
         }
