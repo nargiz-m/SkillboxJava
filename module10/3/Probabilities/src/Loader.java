@@ -3,8 +3,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Loader {
     public static void main(String[] args) {
@@ -51,18 +51,9 @@ public class Loader {
         return strToWrite;
     }
 
-    private static HashMap<String, Integer> sortByValue(HashMap<String, Integer> unsorted) {
-        List<Map.Entry<String, Integer>> list = new LinkedList<>(unsorted.entrySet());
-        list.sort(new Comparator<Map.Entry<String, Integer>>() {
-            @Override
-            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                return (o1.getValue()).compareTo(o2.getValue());
-            }
-        });
-        HashMap<String, Integer> sorted = new LinkedHashMap<>();
-        for (Map.Entry<String, Integer> entry : list) {
-            sorted.put(entry.getKey(), entry.getValue());
-        }
-        return sorted;
+    private static Map<String, Integer> sortWithStreams(HashMap<String, Integer> unsorted) {
+        Stream<Map.Entry<String, Integer>> unsortedStream = unsorted.entrySet().stream();
+        Stream<Map.Entry<String, Integer>> sortedStream = unsortedStream.sorted(Map.Entry.comparingByValue());
+        return sortedStream.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
     }
 }
