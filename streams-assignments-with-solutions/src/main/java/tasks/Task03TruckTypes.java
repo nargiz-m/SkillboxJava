@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Есть грузовик Truck, у которого задана максимальная грузоподьемность.
@@ -25,7 +26,17 @@ public class Task03TruckTypes {
      * @return
      */
     public static TruckType getTypeByWeight(Truck t) {
-        throw new PleaseImplementMeException();
+        try {
+            if(TruckType.Pickup.canHandleWeight(t.maxWeightKg)) {
+                return TruckType.Pickup;
+            } else if(TruckType.SmallBoxTruck.canHandleWeight(t.maxWeightKg)) {
+                return TruckType.SmallBoxTruck;
+            } else {
+                return TruckType.SemiTrailer;
+            }
+        } catch (Exception e) {
+            throw new PleaseImplementMeException();
+        }
     }
 
     /**
@@ -47,7 +58,11 @@ public class Task03TruckTypes {
      * @return
      */
     public static Map<TruckType, List<Truck>> groupTrucksByType(List<Truck> trucks) {
-        throw new PleaseImplementMeException();
+        try {
+            return trucks.stream().collect(Collectors.groupingBy(Task03TruckTypes::getTypeByWeight));
+        } catch (Exception e) {
+            throw new PleaseImplementMeException();
+        }
     }
 
     /**
@@ -70,7 +85,11 @@ public class Task03TruckTypes {
      * @return
      */
     public static Map<TruckType, Long> countTrucksByType(List<Truck> trucks) {
-        throw new PleaseImplementMeException();
+        try {
+            return trucks.stream().collect(Collectors.groupingBy(Task03TruckTypes::getTypeByWeight, Collectors.counting()));
+        } catch (Exception e) {
+            throw new PleaseImplementMeException();
+        }
     }
 
     /**

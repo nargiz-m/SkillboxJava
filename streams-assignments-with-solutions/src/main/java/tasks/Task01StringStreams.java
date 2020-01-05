@@ -2,6 +2,7 @@ package tasks;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class Task01StringStreams {
 
@@ -13,7 +14,17 @@ class Task01StringStreams {
      *  "ABC" -> 0
      */
     static long countLowercaseLetters(String str) {
-        throw new PleaseImplementMeException();
+        try {
+            int count = 0;
+            for (int i = 0; i < str.length(); i++){
+                if(Character.isLowerCase(str.charAt(i))) {
+                    count++;
+                }
+            }
+            return count;
+        } catch (Exception e) {
+            throw new PleaseImplementMeException();
+        }
     }
 
 
@@ -33,6 +44,11 @@ class Task01StringStreams {
      *    - Collectors.joining
      */
     static String replaceWordsOnLength(String str) {
-        throw new PleaseImplementMeException();
+        try {
+            Stream<String> wordStream = Arrays.stream(str.split("\\s+")).map(x -> Integer.toString(x.length()));
+            return wordStream.collect(Collectors.joining(" "));
+        } catch (Exception e) {
+            throw new PleaseImplementMeException();
+        }
     }
 }

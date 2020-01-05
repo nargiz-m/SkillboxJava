@@ -2,6 +2,7 @@ package tasks;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Task02Reduce {
 
@@ -28,6 +29,11 @@ public class Task02Reduce {
      * @return
      */
     public static Integer multiply(List<Integer> linkedListOfNumbers) {
-        throw new PleaseImplementMeException();
+        try{
+            Optional<Integer> result = linkedListOfNumbers.stream().reduce((x,y) -> x*y).filter(i -> i <= 100);
+            return result.orElse(-1);
+        } catch (Exception e) {
+            throw new PleaseImplementMeException();
+        }
     }
 }
