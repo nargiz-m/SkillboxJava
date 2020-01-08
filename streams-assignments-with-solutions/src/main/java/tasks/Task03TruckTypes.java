@@ -27,13 +27,7 @@ public class Task03TruckTypes {
      */
     public static TruckType getTypeByWeight(Truck t) {
         try {
-            if(TruckType.Pickup.canHandleWeight(t.maxWeightKg)) {
-                return TruckType.Pickup;
-            } else if(TruckType.SmallBoxTruck.canHandleWeight(t.maxWeightKg)) {
-                return TruckType.SmallBoxTruck;
-            } else {
-                return TruckType.SemiTrailer;
-            }
+            return Arrays.stream(TruckType.values()).filter(type -> type.canHandleWeight(t.maxWeightKg)).findFirst().get();
         } catch (Exception e) {
             throw new PleaseImplementMeException();
         }
