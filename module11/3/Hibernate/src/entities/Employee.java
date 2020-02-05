@@ -1,6 +1,8 @@
 package entities;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * Created by Danya on 26.10.2015.
@@ -11,6 +13,7 @@ public class Employee {
     private Integer salary;
     private String name;
     private Department department;
+    private HashSet<Department> departments = new HashSet<>(0);
 
     public Employee() {
         //Used by Hibernate
@@ -54,5 +57,13 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    public HashSet<Department> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Collection<Department> departments) {
+        this.departments.addAll(departments);
     }
 }

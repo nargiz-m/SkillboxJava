@@ -8,7 +8,7 @@ import java.util.HashSet;
  */
 public class Department {
     private Integer id;
-    private Integer headId;
+    private Employee headId;
     private String name;
     private String description;
     private HashSet<Employee> employees = new HashSet<>(0);
@@ -29,11 +29,11 @@ public class Department {
         this.id = id;
     }
 
-    public Integer getHeadId() {
+    public Employee getHeadId() {
         return headId;
     }
 
-    public void setHeadId(Integer headId) {
+    public void setHeadId(Employee headId) {
         this.headId = headId;
     }
 
