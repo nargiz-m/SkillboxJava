@@ -38,6 +38,19 @@
             <key><column name="head_id" not-null="true"/></key>
             <one-to-many class="entities.Department"/>
         </set>
+        <set name="vacations" table="vacation" inverse="true" lazy="true" fetch="select">
+            <key><column name="employee_id" not-null="true"/></key>
+            <one-to-many class="entities.Vacation"/>
+        </set>
+    </class>
+
+    <class name="Vacation" table="vacation">
+        <id name="id" column="id"><generator class="increment"/></id>
+        <property name="vacationBeginning" column="vacation_beginning"/>
+        <property name="vacationEnding" column="vacation_ending"/>
+        <many-to-one name="employee" class="entities.Employee" unique="false" fetch="select">
+            <column name="employee_id"/>
+        </many-to-one>
     </class>
 
 </hibernate-mapping>
