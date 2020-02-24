@@ -44,7 +44,7 @@ public class Loader {
         List<Employee> employeesWrongDepartment = (List<Employee>) session.createQuery(
                 "SELECT e FROM Employee AS e JOIN e.department AS d " +
                         "WHERE e != d.headId AND e IN (SELECT DISTINCT headId FROM Department)").list();
-        System.out.println("Employees working for one departments and managing the others");
+        System.out.println("Employees working for one departments and managing the others:");
         for (Employee employee : employeesWrongDepartment) {
             System.out.println(employee.getName());
         }
@@ -53,7 +53,7 @@ public class Loader {
         List<Employee> employeesSalary = (List<Employee>) session.createQuery(
                 "SELECT e FROM Employee AS e JOIN e.department AS d " +
                         "WHERE e.salary < 115000 AND e IN (SELECT DISTINCT headId FROM Department)").list();
-        System.out.println("Heads of departments with salaries less than 115 000 rubles a month");
+        System.out.println("Heads of departments with salaries less than 115 000 rubles a month:");
         for (Employee employee : employeesSalary) {
             System.out.println(employee.getSalary() + "\t" + employee.getName());
         }
@@ -62,7 +62,7 @@ public class Loader {
         List<Employee> employeesHireDate = (List<Employee>) session.createQuery(
                 "SELECT e FROM Employee AS e JOIN e.department AS d " +
                         "WHERE e.hireDate < '2010-03-01' AND e IN (SELECT DISTINCT headId FROM Department)").list();
-        System.out.println("Heads of departments with salaries less than 115 000 rubles a month");
+        System.out.println("Heads of departments who started working before march:");
         for (Employee employee : employeesHireDate) {
             System.out.println(employee.getHireDate() + "\t" + employee.getName());
         }
@@ -74,6 +74,23 @@ public class Loader {
 
         for (Department department : departments) {
             departmentVacationsIntersession(department);
+        }
+
+        //Вывести список отделов с количеством сотрудников в каждом из них
+        List<Object[]> departmentsWithEmployeeCount = (List<Object[]>) session.createQuery(
+                "SELECT d.name, COUNT(e.id) FROM Employee AS e JOIN e.department AS d GROUP BY d.id").list();
+        System.out.println("Number of Employees in each Department:");
+        for (Object[] objects : departmentsWithEmployeeCount) {
+            System.out.println(objects[1] + " employees in " + objects[0]);
+        }
+
+        //Вывести список отделов, в которых работает менее трех сотрудников
+        List<Object[]> departmentsWithFewEmployees = (List<Object[]>) session.createQuery(
+                "SELECT d.name, COUNT(e.id) FROM Employee AS e JOIN e.department AS d " +
+                        "GROUP BY d.id HAVING COUNT(e.id) < 3").list();
+        System.out.println("Number of Employees is less than 3:");
+        for (Object[] objects : departmentsWithFewEmployees) {
+            System.out.println(objects[1] + " employees in " + objects[0]);
         }
 
         session.getTransaction().commit();
