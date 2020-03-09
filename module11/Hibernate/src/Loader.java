@@ -6,18 +6,32 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.query.Query;
+import org.hibernate.transform.Transformers;
 
 import java.io.File;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Danya on 26.10.2015.
  */
 public class Loader {
     private static SessionFactory sessionFactory;
+
+    public static class NameCount {
+        public String name;
+        public Long count;
+    }
+
+    static class VacationComparator implements Comparator<Vacation> {
+        @Override
+        public int compare(Vacation v1, Vacation v2) {
+            LocalDate v1VacationBeginning = v1.getVacationBeginning();
+            LocalDate v2VacationBeginning = v2.getVacationBeginning();
+            return v1VacationBeginning.isBefore(v2VacationBeginning) ? 0 : 1;
+        }
+    }
 
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
@@ -26,7 +40,7 @@ public class Loader {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        List<Department> departments = (List<Department>) session.createQuery("FROM Department").list();
+        List<Department> departments = session.createQuery("FROM Department", Department.class).list();
         System.out.println("Список отделов производства:");
         for (Department department : departments) {
             System.out.println(department.getName());
@@ -36,38 +50,35 @@ public class Loader {
 //        session.save(dept);
 //        System.out.println("Сохранен отдел производства с id = " + dept.getId());
 
-//        Department dept = (Department) session.createQuery("FROM Department WHERE name=:name")
+//        Department dept = session.createQuery("FROM Department WHERE name=:name", Department.class)
 //            .setParameter("name", "Отдел производства").list().get(0);
 //        session.delete(dept);
 
         //Вывести ошибочно привязанных сотрудников, которые работают в одних отделах, а руководят другими;
-        List<Employee> employeesWrongDepartment = (List<Employee>) session.createQuery(
-                "SELECT e FROM Employee AS e JOIN e.department AS d " +
-                        "WHERE e != d.headId AND e IN (SELECT DISTINCT headId FROM Department)").list();
+        List<Employee> employeesWrongDepartment = session.createQuery("SELECT e FROM Employee AS e JOIN e.department AS d " +
+                "WHERE e != d.headId AND e IN (SELECT DISTINCT headId FROM Department)", Employee.class).list();
         System.out.println("Employees working for one departments and managing the others:");
         for (Employee employee : employeesWrongDepartment) {
             System.out.println(employee.getName());
         }
 
         //Вывести руководителей отделов, зарплата которых составляет менее 115 000 рублей в месяц;
-        List<Employee> employeesSalary = (List<Employee>) session.createQuery(
-                "SELECT e FROM Employee AS e JOIN e.department AS d " +
-                        "WHERE e.salary < 115000 AND e IN (SELECT DISTINCT headId FROM Department)").list();
+        List<Employee> employeesSalary = session.createQuery("SELECT e FROM Employee AS e JOIN e.department AS d " +
+                "WHERE e.salary < 115000 AND e IN (SELECT DISTINCT headId FROM Department)", Employee.class).list();
         System.out.println("Heads of departments with salaries less than 115 000 rubles a month:");
         for (Employee employee : employeesSalary) {
             System.out.println(employee.getSalary() + "\t" + employee.getName());
         }
 
         //Вывести руководителей отделов, которые вышли на работу до марта.
-        List<Employee> employeesHireDate = (List<Employee>) session.createQuery(
-                "SELECT e FROM Employee AS e JOIN e.department AS d " +
-                        "WHERE e.hireDate < '2010-03-01' AND e IN (SELECT DISTINCT headId FROM Department)").list();
+        List<Employee> employeesHireDate = session.createQuery("SELECT e FROM Employee AS e JOIN e.department AS d " +
+                "WHERE e.hireDate < '2010-03-01' AND e IN (SELECT DISTINCT headId FROM Department)", Employee.class).list();
         System.out.println("Heads of departments who started working before march:");
         for (Employee employee : employeesHireDate) {
             System.out.println(employee.getHireDate() + "\t" + employee.getName());
         }
 
-        List<Employee> employees = (List<Employee>) session.createQuery("FROM Employee").list();
+        List<Employee> employees = session.createQuery("FROM Employee", Employee.class).list();
         for (Employee employee : employees) {
             createVacation(employee, session);
         }
@@ -77,20 +88,21 @@ public class Loader {
         }
 
         //Вывести список отделов с количеством сотрудников в каждом из них
-        List<Object[]> departmentsWithEmployeeCount = (List<Object[]>) session.createQuery(
-                "SELECT d.name, COUNT(e.id) FROM Employee AS e JOIN e.department AS d GROUP BY d.id").list();
+        Query<NameCount> query = session.createQuery("SELECT d.name AS name, COUNT(e.id) AS count " +
+                "FROM Employee AS e JOIN e.department AS d GROUP BY d.id");
+        List<NameCount> departmentsWithEmployeeCount = query.setResultTransformer(Transformers.aliasToBean(NameCount.class)).list();
         System.out.println("Number of Employees in each Department:");
-        for (Object[] objects : departmentsWithEmployeeCount) {
-            System.out.println(objects[1] + " employees in " + objects[0]);
+        for (NameCount nameCount : departmentsWithEmployeeCount) {
+            System.out.println(nameCount.count + " employees in " + nameCount.name);
         }
 
         //Вывести список отделов, в которых работает менее трех сотрудников
-        List<Object[]> departmentsWithFewEmployees = (List<Object[]>) session.createQuery(
-                "SELECT d.name, COUNT(e.id) FROM Employee AS e JOIN e.department AS d " +
-                        "GROUP BY d.id HAVING COUNT(e.id) < 3").list();
+        Query<NameCount> queryFew = session.createQuery("SELECT d.name AS name, COUNT(e.id) AS count " +
+                "FROM Employee AS e JOIN e.department AS d GROUP BY d.id HAVING COUNT(e.id) < 3");
+        List<NameCount> departmentsWithFewEmployees =  queryFew.setResultTransformer(Transformers.aliasToBean(NameCount.class)).list();
         System.out.println("Number of Employees is less than 3:");
-        for (Object[] objects : departmentsWithFewEmployees) {
-            System.out.println(objects[1] + " employees in " + objects[0]);
+        for (NameCount nameCount : departmentsWithFewEmployees) {
+            System.out.println(nameCount.count + " employees in " + nameCount.name);
         }
 
         session.getTransaction().commit();
@@ -151,9 +163,11 @@ public class Loader {
     public static void departmentVacationsIntersession(Department department) {
         Set<Employee> employees = department.getEmployees();
         for (Employee emp2 : employees) {
-            Set<Vacation> vacations2 = emp2.getVacations();
+            List<Vacation> vacations2 = new ArrayList<Vacation>(emp2.getVacations());
+            Collections.sort(vacations2, new VacationComparator());
             for (Employee emp1 : employees) {
-                Set<Vacation> vacations1 = emp1.getVacations();
+                List<Vacation> vacations1 = new ArrayList<Vacation>(emp1.getVacations());
+                Collections.sort(vacations1, new VacationComparator());
                 for (Vacation vac1 : vacations1) {
                     for (Vacation vac2 : vacations2) {
                         if (vac1.getVacationBeginning().isBefore(vac2.getVacationBeginning()) &&
