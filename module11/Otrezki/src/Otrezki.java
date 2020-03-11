@@ -30,7 +30,7 @@ public class Otrezki {
 
 
     public static boolean isIntersect(Interval i1, Interval i2) {
-        return i1.from < i2.from && i2.from < i1.to; // TODO
+        return (i1.from < i2.from && i2.from < i1.to) || (i2.from < i1.to && i1.from < i2.to);
     }
 
     public static Interval fromRow(String str) {
