@@ -1,0 +1,57 @@
+auth.sendCode
+Отправляет код подтверждения в сообщения на указаный номер по СМС.
+Параметры:
+phone_number 	string 	Телефонный номер в международном формате.
+sms_type 	int 	Тип текста сообщения.
+Possible values:
+0 - сообщение содержит номерной код.
+1 (deprecated) - сообщение содержит ссылку {app_name}://{code}
+5 - сообщение отправлено через Телеграм, а не по СМС (the (auth.sentAppCode) constructor may be returned in this case)
+api_id 	        int 	Идентификатор приложения (see App configuration)
+api_hash 	string 	Секретный хэш приложения (see App configuration)
+lang_code 	string 	Код языка, используемого на клиенте, ISO 639-1 standard
+Результат:
+Метод возввращает объект auth.SentCode с информацией об отправке сообщения.
+
+auth.sendCall
+Осуществляет голосовой звонок на указанный номер. Робот повторит код подтверждения из ранее отправленного СМС сообщения.
+Параметры:
+phone_number 	string 	Телефонный номер в международном формате.
+phone_code_hash string 	ID СМС-сообщения.
+Результат:
+Тип Boolean.
+
+auth.checkPhone
+Возвращает информацию о том, был ли зарегистрирован указанный номер.
+Параметры:
+phone_number 	string 	Телефонный номер в международном формате.
+Результат:
+Метод возвращает тип объекта auth.CheckedPhone с информацией о том, был ли аккаунт с таким номером уже зарегистрирован, были отправлены приглашения на этот номер (с использованием метода auth.sendInvites).
+
+auth.signUp
+Registers a validated phone number in the system.
+Parameters
+phone_number 	string 	Phone number in the international format
+phone_code_hash string 	SMS-message ID
+phone_code 	string 	Valid numerical code from the SMS-message
+first_name 	string 	New user first name
+last_name 	string 	New user last name
+Result
+Returns an auth.Authorization object with information about the new authorization.
+
+auth.signIn
+Signs in a user with a validated phone number.
+Parameters
+phone_number 	string 	Phone number in the international format
+phone_code_hash 	string 	SMS-message ID
+phone_code 	string 	Valid numerical code from the SMS-message
+Result
+Returns an auth.Authorization object with information on the new authorization.
+
+auth.importAuthorization
+Logs in a user using a key transmitted from his native data-centre.
+Parameters
+id 	int 	User ID
+bytes 	bytes 	Authorization key
+Result
+auth.Authorization

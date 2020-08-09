@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormContacts">
+  <grid id="27dc6" binding="rootPanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <maximumSize width="500" height="400"/>
+      <minimumSize width="500" height="400"/>
+      <preferredSize width="500" height="400"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="5d075" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="2">
+        <constraints/>
+        <properties>
+          <maximumSize width="500" height="25"/>
+          <minimumSize width="500" height="25"/>
+          <preferredSize width="500" height="25"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="430cd" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints/>
+        <properties>
+          <background color="-16318399"/>
+          <maximumSize width="500" height="375"/>
+          <minimumSize width="500" height="375"/>
+          <opaque value="false"/>
+          <preferredSize width="500" height="375"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="a37db" binding="listPanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+            <constraints border-constraint="West"/>
+            <properties>
+              <maximumSize width="220" height="365"/>
+              <minimumSize width="220" height="365"/>
+              <preferredSize width="220" height="365"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="5b039" binding="searchPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <alignmentX value="0.0"/>
+                  <alignmentY value="0.0"/>
+                  <maximumSize width="220" height="60"/>
+                  <minimumSize width="220" height="60"/>
+                  <preferredSize width="220" height="60"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="5ff90" binding="contactPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <maximumSize width="220" height="60"/>
+                  <minimumSize width="220" height="60"/>
+                  <preferredSize width="220" height="60"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="cfbe8" binding="picPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <maximumSize width="60" height="60"/>
+                      <minimumSize width="60" height="60"/>
+                      <preferredSize width="60" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="1c9e5" binding="lastLogPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <maximumSize width="20" height="60"/>
+                      <minimumSize width="20" height="60"/>
+                      <preferredSize width="20" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="4115c" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <maximumSize width="140" height="60"/>
+                      <minimumSize width="140" height="60"/>
+                      <preferredSize width="140" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="11452" binding="namePanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="66ace" class="javax.swing.JTextPane" binding="андрейПетровTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Андрей Петров"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="21d4f" binding="messagePanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="790e5" class="javax.swing.JTextPane" binding="хорошоДоВстречиTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Хорошо! До встречи..."/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="1e347" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <maximumSize width="220" height="60"/>
+                  <minimumSize width="220" height="60"/>
+                  <preferredSize width="220" height="60"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="dcc9f" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <maximumSize width="60" height="60"/>
+                      <minimumSize width="60" height="60"/>
+                      <preferredSize width="60" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="25a8c" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <maximumSize width="20" height="60"/>
+                      <minimumSize width="20" height="60"/>
+                      <preferredSize width="20" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="85c66" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <maximumSize width="140" height="60"/>
+                      <minimumSize width="140" height="60"/>
+                      <preferredSize width="140" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="a68f1" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="b20de" class="javax.swing.JTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Петр Сергеев"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="71a35" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="7706a" class="javax.swing.JTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Вы: Хорошо! До встречи."/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="e1afe" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <maximumSize width="220" height="60"/>
+                  <minimumSize width="220" height="60"/>
+                  <preferredSize width="220" height="60"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="99036" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <maximumSize width="60" height="60"/>
+                      <minimumSize width="60" height="60"/>
+                      <preferredSize width="60" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="29528" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <maximumSize width="20" height="60"/>
+                      <minimumSize width="20" height="60"/>
+                      <preferredSize width="20" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="9dc3f" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <maximumSize width="140" height="60"/>
+                      <minimumSize width="140" height="60"/>
+                      <preferredSize width="140" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="64af0" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="e0279" class="javax.swing.JTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Дмитрий Петров"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="383ab" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="51f6e" class="javax.swing.JTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Почему?"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="992af" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <maximumSize width="220" height="60"/>
+                  <minimumSize width="220" height="60"/>
+                  <preferredSize width="220" height="60"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="d7868" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <maximumSize width="60" height="60"/>
+                      <minimumSize width="60" height="60"/>
+                      <preferredSize width="60" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="3ccfb" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <maximumSize width="20" height="60"/>
+                      <minimumSize width="20" height="60"/>
+                      <preferredSize width="20" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <grid id="2f701" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <maximumSize width="140" height="60"/>
+                      <minimumSize width="140" height="60"/>
+                      <preferredSize width="140" height="60"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="6ed17" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="e275a" class="javax.swing.JTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Петраков Олег"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="12392" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="140" height="30"/>
+                          <minimumSize width="140" height="30"/>
+                          <preferredSize width="140" height="30"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="e65d3" class="javax.swing.JTextPane" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <text value="Буду завтра в 20:00..."/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="7a591" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="North"/>
+            <properties>
+              <maximumSize width="500" height="30"/>
+              <minimumSize width="500" height="30"/>
+              <preferredSize width="500" height="30"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="8904" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <maximumSize width="150" height="365"/>
+              <minimumSize width="350" height="365"/>
+              <preferredSize width="350" height="365"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormNumber">
+  <grid id="27dc6" binding="rootPanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <maximumSize width="500" height="400"/>
+      <minimumSize width="500" height="400"/>
+      <preferredSize width="500" height="400"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="260a1" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <maximumSize width="500" height="25"/>
+          <minimumSize width="500" height="25"/>
+          <preferredSize width="500" height="25"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="3f11a" binding="mainPanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+        <constraints/>
+        <properties>
+          <background color="-16318399"/>
+          <maximumSize width="500" height="375"/>
+          <minimumSize width="500" height="375"/>
+          <opaque value="false"/>
+          <preferredSize width="500" height="375"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="97c56" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="150" height="150"/>
+              <minimumSize width="150" height="150"/>
+              <preferredSize width="150" height="150"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="51dcd" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="250" height="50"/>
+              <minimumSize width="250" height="50"/>
+              <preferredSize width="250" height="50"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="c69f8" class="javax.swing.JTextPane" binding="введитеКодСтраныИTextPane" default-binding="true">
+                <constraints/>
+                <properties>
+                  <editable value="false"/>
+                  <enabled value="true"/>
+                  <maximumSize width="250" height="50"/>
+                  <minimumSize width="250" height="50"/>
+                  <preferredSize width="250" height="50"/>
+                  <text value="Введите код страны и номер Вашего мобильного телефона"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="2ca17" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="300" height="40"/>
+              <minimumSize width="300" height="40"/>
+              <preferredSize width="300" height="40"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="4f3f5" class="javax.swing.JTextField" binding="numberField">
+                <constraints/>
+                <properties>
+                  <maximumSize width="200" height="30"/>
+                  <minimumSize width="200" height="30"/>
+                  <preferredSize width="200" height="30"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="69af4" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="300" height="60"/>
+              <minimumSize width="300" height="60"/>
+              <preferredSize width="300" height="60"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="bc639" class="javax.swing.JButton" binding="buttonContinue">
+                <constraints/>
+                <properties>
+                  <maximumSize width="200" height="40"/>
+                  <minimumSize width="200" height="40"/>
+                  <preferredSize width="200" height="40"/>
+                  <text value="ПРОДОЛЖИТЬ"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

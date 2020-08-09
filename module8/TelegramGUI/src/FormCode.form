@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormCode">
+  <grid id="27dc6" binding="rootPanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <maximumSize width="500" height="400"/>
+      <minimumSize width="500" height="400"/>
+      <preferredSize width="500" height="400"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="40562" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <maximumSize width="500" height="25"/>
+          <minimumSize width="500" height="25"/>
+          <preferredSize width="500" height="25"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="64280" binding="mainPanel" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+        <constraints/>
+        <properties>
+          <background color="-16318399"/>
+          <maximumSize width="500" height="375"/>
+          <minimumSize width="500" height="375"/>
+          <opaque value="false"/>
+          <preferredSize width="500" height="375"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="95c59" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="100" height="100"/>
+              <minimumSize width="100" height="100"/>
+              <preferredSize width="100" height="100"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="fd973" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="300" height="30"/>
+              <minimumSize width="300" height="30"/>
+              <preferredSize width="300" height="30"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="d8d9a" class="javax.swing.JLabel" binding="numberLabel">
+                <constraints/>
+                <properties>
+                  <text value="Label"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="529ed" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="280" height="60"/>
+              <minimumSize width="280" height="60"/>
+              <preferredSize width="280" height="60"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="9466b" class="javax.swing.JTextPane" binding="наДанныйНомерТелефонаTextPane" default-binding="true">
+                <constraints/>
+                <properties>
+                  <editable value="false"/>
+                  <enabled value="true"/>
+                  <maximumSize width="280" height="50"/>
+                  <minimumSize width="280" height="50"/>
+                  <preferredSize width="280" height="50"/>
+                  <text value="На данный номер телефона было отправлено SMS-сообщение с кодом потверждения. Пожалуйста, введите этот код в поле ниже:"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="51059" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="300" height="40"/>
+              <minimumSize width="300" height="40"/>
+              <preferredSize width="300" height="40"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="752b6" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
+                <constraints/>
+                <properties>
+                  <maximumSize width="100" height="30"/>
+                  <minimumSize width="100" height="30"/>
+                  <preferredSize width="100" height="30"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="9f2f6" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <maximumSize width="300" height="60"/>
+              <minimumSize width="300" height="60"/>
+              <preferredSize width="300" height="60"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="b3085" class="javax.swing.JButton" binding="buttonContinue">
+                <constraints/>
+                <properties>
+                  <maximumSize width="200" height="40"/>
+                  <minimumSize width="200" height="40"/>
+                  <preferredSize width="200" height="40"/>
+                  <text value="ПРОДОЛЖИТЬ"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

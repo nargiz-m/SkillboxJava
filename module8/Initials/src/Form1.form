@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Form1">
+  <grid id="27dc6" binding="rootPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="31" y="20" width="543" height="365"/>
+    </constraints>
+    <properties>
+      <maximumSize width="500" height="40"/>
+      <minimumSize width="500" height="40"/>
+      <preferredSize width="500" height="40"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="18ac6" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="Фамилия"/>
+        </properties>
+      </component>
+      <component id="38f43" class="javax.swing.JTextField" binding="surname">
+        <constraints/>
+        <properties>
+          <maximumSize width="100" height="24"/>
+          <minimumSize width="100" height="24"/>
+          <preferredSize width="100" height="24"/>
+        </properties>
+      </component>
+      <component id="f5f15" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="Имя"/>
+        </properties>
+      </component>
+      <component id="a858" class="javax.swing.JTextField" binding="name">
+        <constraints/>
+        <properties>
+          <maximumSize width="100" height="24"/>
+          <minimumSize width="100" height="24"/>
+          <preferredSize width="100" height="24"/>
+        </properties>
+      </component>
+      <component id="73c5c" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="Отчество"/>
+        </properties>
+      </component>
+      <component id="4ac1f" class="javax.swing.JTextField" binding="patronymic">
+        <constraints/>
+        <properties>
+          <maximumSize width="100" height="24"/>
+          <minimumSize width="100" height="24"/>
+          <preferredSize width="100" height="24"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="acbf8" class="javax.swing.JButton" binding="Переключить">
+        <constraints/>
+        <properties>
+          <text value="Переключить"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

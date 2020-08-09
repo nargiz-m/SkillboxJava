@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormInitials">
+  <grid id="27dc6" binding="rootPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="56" y="20" width="603" height="400"/>
+    </constraints>
+    <properties>
+      <maximumSize width="500" height="300"/>
+      <minimumSize width="500" height="300"/>
+      <preferredSize width="500" height="300"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="24af9" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <maximumSize width="400" height="35"/>
+          <minimumSize width="400" height="35"/>
+          <preferredSize width="400" height="35"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="50f1a" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <text value="Ф.И.О."/>
+            </properties>
+          </component>
+          <component id="e7bf8" class="javax.swing.JTextField" binding="initialsField">
+            <constraints/>
+            <properties>
+              <maximumSize width="300" height="24"/>
+              <minimumSize width="300" height="24"/>
+              <preferredSize width="300" height="24"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="45227" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <maximumSize width="400" height="35"/>
+          <minimumSize width="400" height="35"/>
+          <preferredSize width="400" height="35"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="731c1" class="javax.swing.JButton" binding="switchButton">
+            <constraints/>
+            <properties>
+              <text value="Переключить"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="a2260" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <maximumSize width="400" height="35"/>
+          <minimumSize width="400" height="35"/>
+          <preferredSize width="400" height="35"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="4d888" class="javax.swing.JProgressBar" binding="progressBar">
+            <constraints/>
+            <properties>
+              <maximumSize width="200" height="10"/>
+              <minimumSize width="200" height="10"/>
+              <preferredSize width="200" height="10"/>
+              <value value="50"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
